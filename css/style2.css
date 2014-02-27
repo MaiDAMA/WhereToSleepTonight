@@ -1,0 +1,118 @@
+body
+{
+  background-color:#D8D8D8;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+	
+}
+
+/**********************************************TOP*******************************************************************/
+#top
+{
+  position:relative;
+  z-index: 100;
+  background-color:#CC3333;/*#99CCFF;*/
+  background-repeat: repeat-x;
+  border-color: #CC3333;/*#99CCFF;*/
+  padding: 0;
+}
+
+.container {
+
+  margin-right: auto;
+  margin-left: auto;
+  width: auto;
+  min-width:300px;
+  overflow: hidden;
+  padding: 0px;
+  /*max-height:80px;*/
+}
+
+#top-titre
+{
+ font-family: Garamond, serif;
+ line-height: 0.01em;
+ color: #fff9d6;
+ font-size: 30px;
+ margin-left:50px;
+ text-shadow:4px 4px 4px black;
+}
+
+#logoWTST
+{
+    cursor: pointer;
+	float:left;
+	margin-left:10px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+nav
+{
+    display: inline-block;
+    width: 740px;
+    text-align:right;
+	margin-left:550px;
+}
+
+nav ul
+{
+    list-style-type: none;
+	
+}
+
+
+nav li
+{
+    display: inline-block;
+	cursor: pointer;
+    margin-right: 15px;
+	border-radius:10px;
+	margin:auto; /* Centre le tableau */
+    border: 4px groove #990000; /*#006699; /* Bordure du tableau avec effet 3D (outset) */
+    border-collapse: collapse; /* Colle les bordures entre elles */
+    padding:4px;
+	background-color:#990000;/*#006699;*/
+}
+
+nav a
+{
+    font-size: 1em;
+    color: #FFFFFF;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:link
+{
+	color:#000000;
+    border-bottom: 3px solid #990000;
+	
+}
+nav a:visited
+{
+	color:#FFFFFF;
+    border-bottom: 3px solid #990000;
+}
+
+ nav a:hover
+{
+	color:#000000;
+	border-bottom: 3px solid #990000;
+}
+
+ nav a:active
+{
+	color:#FFFFFF;
+	border-bottom: 3px solid #990000;	
+}
+
+
+
+
+
+

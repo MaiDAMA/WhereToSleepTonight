@@ -4,23 +4,47 @@
 		<title>WhereToSleepTonight</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
-
+		
 		<!-- Additional style information -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-
-
+		
 		<!-- Load the runner -->
 		<script type="text/javascript" src="js/main.js" defer="true"></script>
-		
-
 	</head>
 
 	<body>
-		<header>
-			<a href="index.html"> <img id="logoWTST" src="img/logoWTST.jpg" alt="This is the logo of the application Where To Sleep Tonight" ></a>
+	<div id="menu">
+		<header id="top">
+			<div class="container">
+				<a href="index.html" title="Where To Sleep Tonight">
+					<img id="logoWTST" src="img/logoWTST.jpg" alt="This is the logo of the application Where To Sleep Tonight">
+				</a>
+				<nav>
+					<ul>
+						<li><a href="#" title="Mes listes"><img id="logoWTST" src="img/eyes.png" height="22" width="30"></a></li>
+						<li><a href="#" title="Recherche filtrer"><img id="logoWTST" src="img/search.jpg" height="22" width="30"</a></li>
+						<li><a href="#" title="Paramètre"><img id="logoWTST" src="img/parameter.png" height="22" width="30"></a></li>
+						<li><a href="#" title="Quitter"><img id="logoWTST" src="img/exit.png" height="22" width="30"></a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
-
-
+	</div>
+	
+	<section>
+		<div id="map"></div>
+	</section>
+	
+		
+	<footer id="footer">
+		<div class="container">
+			<a href="index.html" title="Where To Sleep Tonight">
+				<h1 id="top-titre">Where To Sleep Tonight</h1>
+			</a>
+		</div>
+	</footer>
+		<script type="text/javascript" src="libs/OpenLayers/lib/OpenLayers.js"></script>
+		<script type="text/javascript" src="libs/jquery1_1.js"></script>
+		<script type='text/javascript' src='js/main.js'></script>
 	</body>
 </html>

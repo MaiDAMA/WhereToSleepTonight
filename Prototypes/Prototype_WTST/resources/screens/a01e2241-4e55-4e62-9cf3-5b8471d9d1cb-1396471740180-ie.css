@@ -1,0 +1,32 @@
+#s-a01e2241-4e55-4e62-9cf3-5b8471d9d1cb #s-Image_1 {
+  -ms-transform: rotate(0.0deg);
+}
+#s-a01e2241-4e55-4e62-9cf3-5b8471d9d1cb #s-Creer_un_profil {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #CDCDCD;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #CDCDCD;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #CDCDCD;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #CDCDCD;
+  border-radius: 6px 6px 6px 6px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  width: 192px;
+  height: 30px;
+  -pie-background: linear-gradient(to bottom,#FFFFFF,#E6E6E6);
+  -pie-poll: false;
+  -ms-transform: rotate(0.0deg);
+}
+#s-a01e2241-4e55-4e62-9cf3-5b8471d9d1cb > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

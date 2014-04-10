@@ -1,0 +1,105 @@
+#s-9986a070-9378-4afe-8ec1-996370adf10d {
+  background-color: transparent;
+  background-image: none;
+  min-width: 320px;
+  min-height: 481px;
+}
+#s-9986a070-9378-4afe-8ec1-996370adf10d > #alignmentBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#s-9986a070-9378-4afe-8ec1-996370adf10d #s-Image_1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 320px;
+  height: 481px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+}
+#s-9986a070-9378-4afe-8ec1-996370adf10d #s-Image_2 {
+  position: absolute;
+  top: 62px;
+  left: 0px;
+  width: 320px;
+  height: 377px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+}
+#s-9986a070-9378-4afe-8ec1-996370adf10d #s-Button_1 {
+  position: absolute;
+  top: 30px;
+  left: 9px;
+  width: 60px;
+  height: 19px;
+  background-color: #FFFFFF;
+  background-image: -moz-linear-gradient(top,#FFFFFF,#E6E6E6);
+  background-image: -webkit-linear-gradient(top,#FFFFFF,#E6E6E6);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#FFFFFF), color-stop(100%,#E6E6E6));
+  background-image: -o-linear-gradient(top,#FFFFFF,#E6E6E6);
+  background-image: linear-gradient(to bottom,#FFFFFF,#E6E6E6);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #CDCDCD;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #CDCDCD;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #CDCDCD;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #CDCDCD;
+  border-radius: 4px 4px 4px 4px;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+  text-shadow: none;
+  color: #808080;
+  text-align: center;
+  text-decoration: none;
+  font-family: Roboto-Regular;
+  font-size: 11pt;
+  line-height: 11pt;
+}
+#s-9986a070-9378-4afe-8ec1-996370adf10d #s-Button_1 .valign {
+  vertical-align: middle;
+}
+#s-9986a070-9378-4afe-8ec1-996370adf10d #s-Label_1 {
+  position: absolute;
+  top: 30px;
+  left: 102px;
+  width: 116px;
+  height: 25px;
+  background-color: transparent;
+  background-image: none;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  box-shadow: none;
+  text-shadow: none;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  font-family: Roboto-Regular;
+  font-size: 14pt;
+  line-height: 14pt;
+}
+#s-9986a070-9378-4afe-8ec1-996370adf10d #s-Label_1 .valign {
+  vertical-align: middle;
+}
+#s-9986a070-9378-4afe-8ec1-996370adf10d > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WhereToSleepTonight</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		
+		<!-- Additional style information -->
+		<link rel="stylesheet" type="text/css" href="css/install.css" />
+	</head>
+	<body>
+		<div id="logoInstall">
+			<img id="logoWTST" src="img/logoWTST.jpg" alt="This is the logo of the application Where To Sleep Tonight">
+		</div>
+
+		<h3>Where To Sleep Tonight?</h3>
+		
+		<button id="install" onclick="navigator.mozApps.install('http://github.com/MaiDAMA/WhereToSleepTonight/manifest.webapp'); return false;">
+				Installer
+		</button>
+		<p id="status"></p>	
+		
+	<!-- Load the runner -->	
+	<script type="text/javascript" src="js/installerApplication.js"></script>
+	</body>
+</html>

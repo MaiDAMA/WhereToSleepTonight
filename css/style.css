@@ -1,7 +1,7 @@
-
-/********************************TOP***************************/
-#top
-{
+/**********
+  TOP
+***********/
+#top{
   position:relative;
   z-index:100;
   background-color:#CC3333;
@@ -11,7 +11,6 @@
 }
 
 .container {
-
   margin-right: auto;
   margin-left: auto;
   width: auto;
@@ -20,12 +19,27 @@
   padding: 0px;
 }
 
-#logoWTST
-{
+#top-titre{
+  font-family: Garamond, serif;
+  line-height: 0.01em;
+  color: #fff9d6;
+  font-size: 23px;
+  text-align:center;
+  text-shadow:4px 4px 4px black;
+  margin-top: 20px;
+  display:none;
+}
+
+#logoWTST{
   cursor: pointer;
   float:left;
   margin-left:10px;
 }
+
+ .imglogo{
+  width:15px;
+  height:25px;
+ }
 
 a
 {
@@ -34,11 +48,12 @@ a
 
 nav
 {
-  display: block;
-  width:740px;
+  display: none;
+  width:270px;
   text-align:right;
-  margin-left:550px;
+  margin-left:961px;
   min-height: 40px;
+  position:relative;
 }
 
 nav ul
@@ -53,9 +68,9 @@ nav li
    cursor: pointer;
    margin-right: 15px;
    border-radius:10px;
-   margin:auto; /* Centre le tableau */
-   border: 2px outset #990000; /*#006699; /* Bordure du tableau avec effet 3D (outset) */
-   border-collapse: collapse; /* Colle les bordures entre elles */
+   margin:auto; 
+   border: 2px outset #990000;
+   border-collapse: collapse;
    padding:4px;
 }
 
@@ -67,23 +82,26 @@ nav a
    text-decoration: none;
 }
 
-/***************************************BODY***************************/
-body
-{
-  background-color:#D8D8D8;
+/**********
+  PAGE
+***********/
+body{
+  background-color:#FEC3AC;
   max-height: 100%;
   margin: 0;
   padding: 0;
-	
 }
 
-#map
-{
-  width:  auto;
-  height: 600px;
-  border: 10px #CC3353 groove;
-  border-radius: 10px;
-  box-shadow: 6px 6px 0px #CC3353;
+.italic{
+  font-style:italic;
+}
+
+/*****************La carte*****/
+#map{
+  border: 5px groove #CC3353;
+  border-radius: 5px;
+  height: 512px;
+  width: auto;
 }
 
 #OpenLayers_Map_2_OpenLayers_ViewPort{
@@ -91,9 +109,86 @@ body
 }
 
 
+/************La listes des onglets****/
+#tabs{
+  margin-left:25%;
+  margin-top:2%;
+  width:50%;
+}
 
+#tabs #titre_tabs_onglet{
+  font-family: Helvetica,arial;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 1%;
+  text-decoration: underline;
+}
 
-/***********************************FOOTER************************/
+/*******Créer profil***/
+#profil_add{
+  height: 100%;
+  margin-left:35%;
+  width: 35%;
+  margin-top:10%;
+  display:none;
+}
+
+#titre_profil{
+  font-family: Helvetica,arial;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#profil_add   .profil_add_container{
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+#profil_add  .profil_add_container #button_insert_profil{
+  background-color: #CC3333;
+  border-radius: 20px;
+  font-style: italic;
+  height: 41px;
+  margin-left: 3%;
+  width: 82px;
+}
+
+/**********Modifier profil************/
+#profil_modif{
+	
+  height: 100%;
+  margin-left: 30%;
+  width: 35%;
+  margin-top:10%;
+
+}
+#profil_modif .profil_modif_container {
+  margin-left: 1%;
+  margin-top: 0%;
+}
+
+#profil_modif .profil_modif_container #profil_name_modif_anc {
+  margin-left: 17%;
+}
+
+#profil_modif .profil_modif_container #nouveau_pseudo{
+  margin-top: 2%;
+}
+
+#profil_modif  .profil_modif_container #button_modif_profil{
+  background-color: #CC3333;
+  border-radius: 20px;
+  font-style: italic;
+  height: 39px;
+  margin-left: 40%;
+  margin-top: 5%;
+  width: 77px;
+}
+
+/**********
+  FOOTER
+***********/
 
 #footer {
   bottom: 0;
@@ -105,24 +200,78 @@ body
   clear: both;
   background-color:#262626;
   background-repeat: repeat-x;
-  border: 2px outset #990000;/* Bordure du tableau avec effet 3D (outset) */
+  border: 2px outset #990000;
 }
 
-#top-titre
-{
+#bottom-titre{
   font-family: Garamond, serif;
   line-height: 0.01em;
   color: #fff9d6;
-  font-size: 30px;
+  font-size: 23px;
   text-align:center;
   text-shadow:4px 4px 4px black;
 }
 
 
-#install{
-  float: right;
-  background-color: red;
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:30px;
+/*******************
+  Responsive Design
+********************/
+@media (max-height: 300px), (max-width: 500px) {
+
+  #top-titre{
+   font-size:15px;
+  }
+ .imglogo{
+  width:20px;
+  height:12px;
+ }
+ nav{
+  padding:0;
+  margin:0px 0px 0px 45px;
+ }
+ 
+ #map{
+  height:360px;
+ }
+ 
+ #tabs{
+  margin-left:0%;
+  margin-top:0%;
+  width:95%;
+ }
+ 
+ #profil_add{
+  margin-left: 22%;
+  margin-top:25%;
+ }
+
+  #titre_profil{
+  font-size:16px;
+  }
+
+ #profil_add  .profil_add_container #button_insert_profil{
+  margin-left: 18%;
+  margin-top: 10%;
+  font-weight:bold;
+  width:90px;
+ }
+ #profil_modif{
+  margin-left:22%;
+  margin-top:20%;
+ } 
+ 
+ #profil_modif .profil_modif_container #profil_name_modif_anc {
+  margin-left: 0%;
+ }
+ 
+ #profil_modif  .profil_modif_container #button_modif_profil{
+  margin-left: 20%;
+  margin-top: 10%;
+  font-weight:bold
+ }
+}
+
+header,#map,#tabs,footer, #profil_modif, #profil_add{
+  max-width:100%;
 }
 

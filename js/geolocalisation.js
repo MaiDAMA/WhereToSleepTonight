@@ -1,4 +1,12 @@
-/**Affichage de la carte*/
+
+ /****************************************************************************
+    Gestion de la géolocalisation des hotels et de l'utilisateur
+*****************************************************************************/
+
+
+/*******************************************
+Fonciton pour l'Affichage de la carte
+********************************************/
 // Déclaration des variables globales
 //cette variable correspondra à la carte
 var map;
@@ -7,7 +15,9 @@ var  LonLat;
 // variable garda l’identifiant du div  dans lequel s’affichera la carte
 var idMapDiv ='map';
 
-//Fonction permettant l'initialisation de la carte
+/************************************************
+Fonction permettant l'initialisation de la carte
+*************************************************/
 var initialiseMap = function initialiseMap() {
   // Création d'un objet map
     map = new OpenLayers.Map(idMapDiv);
@@ -17,6 +27,9 @@ var initialiseMap = function initialiseMap() {
     map.zoomToMaxExtent();
 };
 
+/********************************
+Fonction de géolocalisation
+********************************/
 var geolocalisation = function(){
   /** Demander de localisation de l'utilisateur**/
   if(navigator.geolocation) {
@@ -26,7 +39,10 @@ var geolocalisation = function(){
   
 };
 
-//Avec cette méthode, je récupère la position de l'utilisateur
+
+/*************************************************************
+Avec cette méthode, je récupère la position de l'utilisateur
+**************************************************************/
 function succesCallback(position) {
   //récupération des positions de l’utilisateur
   var longitudeUser=position.coords.longitude;
@@ -43,7 +59,7 @@ function succesCallback(position) {
   addMarkerUser(LonLat); 
 
   //Centrer la carte avec un zoom de 17 vers la position de l'utilisateur
-  map.setCenter(LonLat, 17);
+  map.setCenter(LonLat,12);
   }
 
   // S'il y a une erreur lors de la demande géolocalisation de l'utilisateur
@@ -62,7 +78,9 @@ function succesCallback(position) {
     }
 };
 
-// fonction permettant d'ajouter un marquer dans un cordonnées
+/**************************************************************
+Fonction permettant d'ajouter un marquer dans un cordonnées
+***************************************************************/
 var addMarkerUser = function (LonLat){
   //création et ajout d'une couche pour acceuillir le Markers
   calqueMarkers = new OpenLayers.Layer.Markers("Repères");
@@ -73,6 +91,9 @@ var addMarkerUser = function (LonLat){
   calqueMarkers.addMarker(markerUtilisateur);
 };
 
+/***************************************************
+Fonction qui permet de convertir les coordonnées 
+****************************************************/
 var convertion = function convertion(longitude,latitude){
   // Variable de projection sur la carte
   var projCarte = new OpenLayers.Projection("EPSG:900913");
@@ -84,5 +105,39 @@ var convertion = function convertion(longitude,latitude){
                 );
 };
 
+/***************************************************
+Fonction qui charge fichier JSON
+****************************************************/
+var chargementJSON=function(){
+  $.getJSON('/data/json/datahotel.json',function(donnees){
+	console.log(donnees);
+   });
+};
+
+var chargementHotel=function(){
+    
+   var hotel1 = {
+    longitude: 2.4453765,
+    latitude: 48.761211
+   };
+   	var hotel2 = {
+    longitude: 2.2130181,
+    latitude: 48.8880776
+   };
+	var tableau_object=[hotel1,hotel2];
+
+    
+	for(var i=0;i<tableau_object.length;i++){
+	var couche_markers = new OpenLayers.Layer.Markers("Markers");
+	lonlat=new OpenLayers.LonLat(tableau_object[i].longitude,tableau_object[i].latitude).transform(
+          new OpenLayers.Projection("EPSG:4326"),
+          new OpenLayers.Projection("EPSG:900913")
+        );
+    var icon = new OpenLayers.Icon('libs/OpenLayers/img/marker-blue.png');
+    var mon_marker=new OpenLayers.Marker(lonlat,icon);
+    couche_markers.addMarker(mon_marker);
+    map.addLayer(couche_markers);
+	}
+};
 
 

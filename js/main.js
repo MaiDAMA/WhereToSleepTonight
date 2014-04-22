@@ -3,11 +3,9 @@
    Fonction lors du chargement de la page
 ********************************************************/
 $(document).ready(function(){
-
+   DB.init();
    loadWTSTN();
-   chargementJSON();
-   chargementHotel();
-   
+
    /********************************************
      Les évenements click des menus
    *******************************************/
@@ -39,7 +37,19 @@ $(document).ready(function(){
 	 titreHomeEnabled();
 	 window.localStorage.removeItem('idload');
      window.close();
-  });  
+  }); 
+  
+  $('#button_insert_profil').click(function() {
+  if(DB.getDatabase()){
+	 var pseudo=$('#profil_name_add').val();
+	 var profil=new Profil(pseudo);
+	 profil.addProfil(pseudo);
+   }
+  }); 
+  
+  
+
+    
   
 });
 

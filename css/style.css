@@ -94,7 +94,7 @@ body{
 #map{
   border: 5px groove #CC3353;
   border-radius: 5px;
-  height: 512px;
+  height: 600px;
   width: auto;
 }
 
@@ -178,6 +178,40 @@ body{
   margin-top: 5%;
   width: 77px;
 }
+
+/**********
+  PopUp
+***********/
+#popup_information{
+ height:50%;
+}
+
+#popup_information #hotel_info{
+ font-size:11px;
+ font-family:arial;
+}
+#popup_information #hotel_info  #btncommenter{
+ background-color: #CC3333;
+ border-radius: 10px;
+ font-size: 11px;
+ font-style: italic;
+ height: 39px;
+ margin-left: -2px;
+ margin-top: 2%;
+ width: 68px;
+}
+#popup_information #hotel_info  #btnfavori{
+ background-color: #CC3333;
+ border-radius: 10px;
+ font-size: 11px;
+ font-style: italic;
+ height: 39px;
+ margin-left: -2px;
+ margin-top: 2%;
+ width: 68px;
+}
+
+
 
 /**********
   FOOTER

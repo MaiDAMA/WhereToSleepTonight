@@ -13,6 +13,9 @@ var map;
 var  LonLat;
 // variable garda l’identifiant du div  dans lequel s’affichera la carte
 var idMapDiv ='map';
+var longitudeUser;
+var latitudeUser;
+var tableau_hotel_proximite=[];
 
 /************************************************
 Fonction permettant l'initialisation de la carte
@@ -44,12 +47,11 @@ Avec cette méthode, je récupère la position de l'utilisateur
 **************************************************************/
 function succesCallback(position) {
   //récupération des positions de l’utilisateur
-  var longitudeUser=position.coords.longitude;
-  var latitudeUser= position.coords.latitude;
+  longitudeUser=position.coords.longitude;
+  latitudeUser= position.coords.latitude;
 
   //appelle a la fonction de convertion 
   convertion(longitudeUser,latitudeUser); 
-  //convertion(48.8880776,"2.2130181");
 
   //creation d'un objet Position puis stockage de cette valeur dans IndexDB
   
@@ -59,7 +61,9 @@ function succesCallback(position) {
   addMarkerUser(LonLat); 
 
   //Centrer la carte avec un zoom de 17 vers la position de l'utilisateur
-  map.setCenter(LonLat,12);
+  //map.setCenter(LonLat,13);
+  map.setCenter(LonLat,14);
+  chargementJSON();
   }
 
   // S'il y a une erreur lors de la demande géolocalisation de l'utilisateur
@@ -109,27 +113,47 @@ var convertion = function convertion(longitude,latitude){
 Fonction qui charge fichier JSON
 ****************************************************/
 var chargementJSON=function(){
-  $.getJSON('/data/json/datahotel.json',function(donnees){
-	console.log(donnees);
-   });
+   $.ajax({
+    dataType:'json',
+	url:'datahotel.json',
+    success: function(datahotel) {
+	  chargementTableauHotelProximite(datahotel);
+	},
+    error: function() {
+       alert('La requête n\'a pas abouti'); 
+	}
+  });    
 };
 
-var chargementHotel=function(){
-    
-   var hotel1 = {
-    longitude: 2.4453765,
-    latitude: 48.761211
-   };
-   	var hotel2 = {
-    longitude: 2.2130181,
-    latitude: 48.8880776
-   };
-	var tableau_object=[hotel1,hotel2];
+/*******************************************************
+Fonction qui stocke dans tableau les hotels à proximité 
+********************************************************/
+var chargementTableauHotelProximite=function(datahotel){
+  var nb=datahotel.length;
+  var j=0;
+  for(var i=0;i<nb;i++){
+    var latitude_hotel=parseFloat(datahotel[i].fields.lat);
+	var longitude_hotel=parseFloat(datahotel[i].fields.lng);
+	var intervalle_latitude=latitudeUser-latitude_hotel;
+	var intervalle_longitude=longitudeUser-longitude_hotel;
+	
+	if((intervalle_latitude <= 0.012 && intervalle_latitude >= -0.012) && (intervalle_longitude <= 0.05 && intervalle_longitude >= -0.05)){
+	   tableau_hotel_proximite.push(datahotel[i]);
+    }
+  }
+  geolocalisationHotel();
+}
 
-    
-	for(var i=0;i<tableau_object.length;i++){
-	var couche_markers = new OpenLayers.Layer.Markers("Markers");
-	lonlat=new OpenLayers.LonLat(tableau_object[i].longitude,tableau_object[i].latitude).transform(
+/**********************************************
+Fonction qui localise les hotels à proximité 
+***********************************************/
+var geolocalisationHotel=function(){
+
+    var name_marker_hotel="HP";
+	for(var i=0;i<tableau_hotel_proximite.length;i++){
+    var name_marker=name_marker_hotel+i;
+	var couche_markers = new OpenLayers.Layer.Markers(name_marker_hotel);
+	lonlat=new OpenLayers.LonLat(tableau_hotel_proximite[i].fields.lng,tableau_hotel_proximite[i].fields.lat).transform(
           new OpenLayers.Projection("EPSG:4326"),
           new OpenLayers.Projection("EPSG:900913")
         );
@@ -137,9 +161,41 @@ var chargementHotel=function(){
     var mon_marker=new OpenLayers.Marker(lonlat,icon);
     couche_markers.addMarker(mon_marker);
     map.addLayer(couche_markers);
+	affichePopup(mon_marker,tableau_hotel_proximite[i]);
 	}
 }
+
+/**********************************************************
+Fonction qui affiche une popup lors du clique d'un marker
+***********************************************************/
+function affichePopup(marker,hotel_proximite){
+   marker.events.register("click", marker, function(e){
+   popup = new OpenLayers.Popup("popup",
+         map.getLonLatFromPixel(e.xy),
+         new OpenLayers.Size(270,195),
+         "example popup",true);	   
+    map.addPopup(popup);
+	gestionPopUp(popup,hotel_proximite);
+	});
+}
+
+function gestionPopUp(popup,hotel_proximite){
  
+   var information_popup="<div id="+"popup_information"+">"+
+   "<fieldset>"+
+   "<legend style="+"font-style:italic;"+">"+"Informations"+"</legend>"+
+   "<div id="+"hotel_info"+">"+
+   hotel_proximite.fields.nom_commercial+"</br>"+
+   hotel_proximite.fields.adresse+"</br>"+
+   hotel_proximite.fields.code_postal+"</br>"+
+   hotel_proximite.fields.telephone+"</br>"+
+   "<textarea cols="+20+"rows="+15+"></textarea>"+"</br>"+
+   "<button type=+"+"button"+" id="+"btncommenter"+">Commenter"+"</button>"+
+   "<button type=+"+"button"+" id="+"btnfavori"+">Ajouter favoris"+"</button>"+
+   "</div>"+
+   "</fieldset>"+
+  "</div>";
+   popup.setContentHTML(information_popup);
+}
 
-
-
+ 

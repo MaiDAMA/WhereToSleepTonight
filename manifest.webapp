@@ -1,7 +1,7 @@
 {
   "name": "WhereToSleepTonight",
   "description": "This application search the different Hotels near of your position ",
-  "launch_path": "/WhereToSleepTonight/index.html",
+  "launch_path": "index.html",
   "icons": {
     "128": "/img/logoWTST.jpeg"
   },

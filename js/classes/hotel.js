@@ -2,7 +2,6 @@
 Constructor of the Hotel class
 **************************************************************************************************/
 var Hotel = function Hotel(nomhotel,ruehotel,villehotel,cphotel,telhotel,longitude,latitude) {
-	this.idhotel=NULL;
 	this.nomhotel=nomhotel;
 	this.ruehotel=ruehotel;
 	this.villehotel=villehotel;

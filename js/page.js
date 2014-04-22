@@ -43,7 +43,7 @@ var initialeLoad=function(){
 	tabsOngletEnabled();
 	modifProfilEnabled();
 	initialiseMap();
-	geolocalisation();   
+	geolocalisation();
 };
 
 /*******************************************

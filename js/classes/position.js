@@ -2,10 +2,8 @@
 Constructor of the Position class
 ******************************************************/
 var Position = function Position(longitude,latitude){
-	this.idposition=0;
 	this.latitude =latitude; 
 	this.longitude = longitude;
-	this.profil=0;//faire passer en paramètre le profil à affecté au this.profil
 }
 
 /*****************************************************

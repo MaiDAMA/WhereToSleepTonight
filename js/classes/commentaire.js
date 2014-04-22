@@ -2,7 +2,6 @@
 Constructor of the Commentaire class
 **************************************************************************************************/
 var Commentaire = function Commentaire(contenuecom,profil,hotel) {
-	this.idcom=NULL;
 	this.contenucom=contenuecom;
 	this.profil=profil;
 	this.hotel=hotel;

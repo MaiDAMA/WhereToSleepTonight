@@ -3,7 +3,7 @@ var params = {
 	version: 11,//version						
 };
 
-
+var positionOS;
 var DB = { 
 	db: null,
 	/**
@@ -25,6 +25,13 @@ var DB = {
 					console.log("DB.request.onupgradeneeded");
 					var objectStore = db.createObjectStore("profil", { keyPath: "id", autoIncrement:true });
 					objectStore.createIndex('name', 'name', {unique:false});
+
+					//creation de objestore position
+					positionOS = db.createObjectStore('position','position', {keyPath: "id", autoIncrement:true});
+
+					//ajout de l'index position au profil
+					objectStore.createIndex('position','position', {unique:false});
+		
 					
 				}
 				else
@@ -129,5 +136,9 @@ var DB = {
 	onerror: function(evt){
 		console.log(evt);
 	}
+
+	/**
+	*ajout d'une position à l'index
+	*/
 };
 	

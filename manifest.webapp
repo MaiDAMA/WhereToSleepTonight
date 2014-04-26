@@ -2,7 +2,7 @@
   "version": "1",
   "name": "WhereToSleepTonight",
   "description": "This application search the different Hotels near of your position ",
-  "launch_path": "/index.html",
+  "launch_path": "/WhereToSleepTonight/index.html",
   "icons": {
       "128": "/img/logoWTST.jpg"
   },

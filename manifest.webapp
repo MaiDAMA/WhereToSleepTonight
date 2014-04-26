@@ -15,13 +15,9 @@
   "installs_allowed_from": ["*"],
 
   "permissions": {
-    "geolocalisation":{
-        "description": "Nécessaire pour votre géolocalisation",
-    }
+    "geolocation":{}
    },
 
-  "appcache_path": "/manifest.appcache",
-  
   "default_locale": "fr"
 
 }

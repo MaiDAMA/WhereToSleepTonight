@@ -1,0 +1,31 @@
+CACHE MANIFEST
+# V1 - 26-04-2014
+# C'est la première version du cache
+css/style.css
+css/jquery-ui.css
+data/json/datahotel.json
+data/json/datamenu.json
+data/IndexDB.js
+img/exit.png
+img/eyes.jpg
+img/eyes.png
+img/hhotel.jpg
+img/hotel.jpg
+img/logoWTST.jpg
+img/logoWTST2.jpg
+img/marker.png
+img/parameter.png
+img/search.jpg
+js/classes/commentaire.js
+js/classes/favori.js
+js/classes/hotel.js
+js/classes/position.js
+js/classes/profil.js
+js/geolocalisation.js
+js/main.js
+js/page.js
+js/position.js
+libs/jquery-ui.js
+libs/jquery1_9.js
+datahotel.json
+les_hotels_classes_en_ile-de-france.xls

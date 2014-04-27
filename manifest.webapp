@@ -4,7 +4,7 @@
   "description": "This application search the different Hotels near of your position ",
   "launch_path": "/WhereToSleepTonight/index.html",
   "icons": {
-      "128": "/img/logoWTST.jpg"
+      "128": "/WhereToSleepTonight//img/logoWTST-128.jpg"
   },
 
   "developer": {

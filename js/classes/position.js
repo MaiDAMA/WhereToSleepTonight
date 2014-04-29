@@ -4,6 +4,7 @@ Constructor of the Position class
 var Position = function Position(longitude,latitude){
 	this.latitude =latitude; 
 	this.longitude = longitude;
+	this.hotels=null;
 }
 
 /*****************************************************
@@ -14,10 +15,8 @@ Prototype of the Position class
 
 Position.prototype = {
 
-	// stockage de la position
-	savePosition: function savePosition(){
-		
+	setTabHotel:function setTabHotel(tabhotels){
+	  this.hotels=tabhotels;
 	},
-	
 }
 	

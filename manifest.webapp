@@ -2,15 +2,18 @@
   "version": "1",
   "name": "WhereToSleepTonight",
   "description": "This application search the different Hotels near of your position ",
-  "launch_path": "/index.html",
+  "launch_path": "/WhereToSleepTonight/index.html",
   "icons": {
-      "128": "/img/logoWTST.jpg"
+
+   "128": "/WhereToSleepTonight/img/logoWTST-128.jpg"
+
   },
 
   "developer": {
   "name": "MaiDAMA_Hellodie_WeLiSa",
   "url": "https://github.com/MaiDAMA/WhereToSleepTonight"
   },
+
 
   "installs_allowed_from": ["*"],
 
@@ -19,9 +22,8 @@
         "description": "Nécessaire pour votre géolocalisation",
     }
    },
-
-  "appcache_path": "/manifest.appcache",
   
+
   "default_locale": "fr"
 
 }

@@ -1,9 +1,9 @@
 /**************************************************************************************************
 Constructor of the Commentaire class
 **************************************************************************************************/
-var Commentaire = function Commentaire(contenuecom,profil,hotel) {
+var Commentaire = function Commentaire(contenuecom,dateenvoie,hotel) {
 	this.contenucom=contenuecom;
-	this.profil=profil;
+	this.dateenvoie=dateenvoie;
 	this.hotel=hotel;
 }
 
@@ -12,5 +12,6 @@ Prototype of the Commentaire class
 **************************************************************************************************/
 	
 /*
-1.Ajouter un commentaire au profil
+1.Affecter hotel au commentaire
+   
 */	

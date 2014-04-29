@@ -47,11 +47,12 @@ a{
 
 nav{
   display:none;
-  margin-left: 961px;
+  margin-left: 1088px;
   min-height: 40px;
   text-align: right;
   width: 270px;
   position:relative; 
+  margin-left: 960px;
 }
 
 nav ul{
@@ -94,19 +95,15 @@ body{
 #map{
   border: 5px groove #CC3353;
   border-radius: 5px;
-  height: 600px;
+  height: 570px;
   width: auto;
-}
-
-#OpenLayers_Map_2_OpenLayers_ViewPort{
-  display: none;
 }
 
 /************La listes des onglets****/
 #tabs{
   margin-left:25%;
   margin-top:2%;
-  width:50%;
+   width: 51%;
 }
 
 #tabs #titre_tabs_onglet{
@@ -147,6 +144,46 @@ body{
   width: 82px;
 }
 
+/****************Recherche hotel***********/
+#recherche_hotel{
+  height: 100%;
+  margin-left: 30%;
+  margin-top: 0;
+  width: 40%;
+  display:none;
+}
+
+#titre_recherche{
+   font-family: Helvetica,arial;
+   font-size: 15px;
+   font-weight: bold;
+   text-align: center;
+}
+
+#recherche_hotel   .profil_add_container{
+   margin-left: 1%;
+   margin-top: -1%;
+}
+#recherche_hotel   .profil_add_container #choix_recherche{
+
+}
+
+#recherche_hotel   .profil_add_container #bloc_recherche{
+  margin-left: 170px;
+  margin-top: -58px;
+}
+
+#recherche_hotel  .profil_add_container #button_recherche_hotel{
+  background-color: #CC3333;
+  border: 2px outset #F8D5A9;
+  border-radius: 20px;
+  font-style: italic;
+  height: 33px;
+  width: 89px;
+  margin-left: 41%;
+  margin-top: 8px;
+}
+
 /**********Modifier profil************/
 #profil_modif{
 	
@@ -162,7 +199,7 @@ body{
 }
 
 #profil_modif .profil_modif_container #profil_name_modif_anc {
-  margin-left: 17%;
+ margin-left: 16%;
 }
 
 #profil_modif .profil_modif_container #nouveau_pseudo{
@@ -178,6 +215,75 @@ body{
   margin-top: 5%;
   width: 77px;
 }
+/********************
+  Gestion des listes 
+*********************/
+
+/**************Liste des hotels********/
+#liste_hotel_conteneur{
+  background-color:#CC3333;
+  opacity:0.8;
+}
+
+#liste_hotel_conteneur #lien_image{
+  margin-left: 1%;
+  width: 10%;
+}
+#liste_hotel_conteneur #titre_commentaire{
+  color: red;
+}
+#liste_hotel_conteneur #contenu_hotel{
+  color: #FFFFFF;
+  font-family: verdana;
+  margin-left: 16%;
+  margin-top: -12%;
+}
+
+/************Listes des commentaire********/
+#liste_commentaire_conteneur{
+  background-color:#CC3333;
+  opacity:0.8;
+  color:white;
+}
+
+#liste_commentaire_conteneur #lien_imagec{
+   margin-left: 2%;
+   margin-top: 2%;
+   width: 10%;
+}
+
+#liste_commentaire_conteneur #bloc_commentaire{
+    margin-left: 16%;
+    margin-top: -11%;
+    width: 80%;
+}
+
+#liste_commentaire_conteneur #bloc_commentaire #contenu_commentaire{
+  color: #FFFFFF;
+  font-family: verdana;
+  margin-left: 16%;
+  margin-top: -12%;
+}
+
+/*******************Liste des favoris****************/
+#liste_favori_conteneur{
+  background-color:#CC3333;
+  opacity:0.8;
+  color:white;
+}
+
+#liste_favori_conteneur #lien_imagef{
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 7%;
+}
+
+#liste_favori_conteneur #bloc_favori{
+   margin-left: 13%;
+   margin-top: -6%;
+   width: 80%;
+}
+
 
 /**********
   PopUp
@@ -187,31 +293,33 @@ body{
 }
 
 #popup_information #hotel_info{
- font-size:11px;
- font-family:arial;
+ font-family: arial;
+ font-size: 10px;
 }
-#popup_information #hotel_info  #btncommenter{
- background-color: #CC3333;
- border-radius: 10px;
- font-size: 11px;
- font-style: italic;
- height: 39px;
- margin-left: -2px;
+#popup_information #hotel_info #btn_commande{
  margin-top: 2%;
- width: 68px;
+}
+
+#popup_information #hotel_info  #btncommenter{
+  background-color: #CC3333;
+  border-radius: 10px;
+  font-style: italic;
+  font-size:11px;
+  font-weight:bold;
 }
 #popup_information #hotel_info  #btnfavori{
  background-color: #CC3333;
  border-radius: 10px;
  font-size: 11px;
  font-style: italic;
- height: 39px;
- margin-left: -2px;
- margin-top: 2%;
- width: 68px;
+ font-weight: bold;
+ margin-left: 14%;
 }
 
-
+#popup{
+  margin-left: 65px;
+  width: 210px;
+}
 
 /**********
   FOOTER
@@ -221,7 +329,7 @@ body{
   bottom: 0;
   left: 0;
   margin-bottom: 0;
-  position: fixed;
+  position:fixed;
   right: 0;
   z-index:1030;
   clear: both;
@@ -295,6 +403,66 @@ body{
   margin-top: 10%;
   font-weight:bold
  }
+ 
+  #recherche_hotel{
+  margin-left: 0%;
+  margin-top:0%;
+  width:100%;
+  height:70%;
+  font-size:14px;
+  }
+  
+  #titre_recherche{
+  font-size:12px;
+  }
+  
+  #liste_hotel_conteneur #contenu_hotel{
+  margin-left: 16%;
+  margin-top:-65px;
+  font-size:10px;
+  }
+  
+  #liste_hotel_conteneur #lien_image{
+  margin-left: 1%;
+  width: 15%;
+  margin-top:7%;
+  }
+  
+  #liste_commentaire_conteneur #lien_imagec{
+   margin-left: 2%;
+   margin-top: 15%;
+   width: 15%;
+  }
+   #liste_commentaire_conteneur #bloc_commentaire{
+    margin-left:20%;
+    margin-top:-80px;
+    width: 80%;
+	font-size:10px;
+   }
+   
+   #liste_favori_conteneur #lien_imagef{
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 10%;
+   }
+   
+   #liste_favori_conteneur #bloc_favori{
+    margin-left: 13%;
+    margin-top:-35px;
+    width:80%;
+  }
+  #recherche_hotel  .profil_add_container #button_recherche_hotel{
+    margin-left:50%;
+  }
+  #recherche_hotel   .profil_add_container #choix_recherche{
+    margin-left:0%;
+  }
+  
+  #recherche_hotel   .profil_add_container #bloc_recherche{
+    margin-left: 120px;
+    margin-top: -58px;
+  }
+
 }
 
 header,#map,#tabs,footer, #profil_modif, #profil_add{

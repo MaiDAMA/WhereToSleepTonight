@@ -3,7 +3,7 @@
   "description": "This application search the different Hotels near of your position ",
   "launch_path": "index.html",
   "icons": {
-    "128": "/img/logoWTST.jpeg"
+   "128": "img/logoWTST-128.jpg"
   },
   "permissions": {
     "geolocation":{}
@@ -13,6 +13,6 @@
     "name": "MaiDAMA_Hellodie_WeLiSa",
     "url": "https://github.com/MaiDAMA/WhereToSleepTonight"
   },
-  
+
   "default_locale": "fr"
 }

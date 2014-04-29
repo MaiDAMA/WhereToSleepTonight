@@ -1,3 +1,4 @@
+
 /**********
   TOP
 ***********/
@@ -35,27 +36,15 @@
   float:left;
   margin-left:10px;
 }
+.imglogo{
+  height:15px; 
+  width:25px;
+}
 
- .imglogo{
-  width:15px;
-  height:25px;
- }
-
-a
-{
+a{
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-nav
-{
-  display: none;
-  width:270px;
-  text-align:right;
-  margin-left:961px;
-  min-height: 40px;
-  position:relative;
-=======
 nav{
   display:none;
   margin-left: 1088px;
@@ -64,35 +53,30 @@ nav{
   width: 270px;
   position:relative; 
   margin-left: 960px;
->>>>>>> 900547550b90c7373ed44f87328a6ea09a058a34
 }
 
-nav ul
-{
-   list-style-type: none;
-	
+nav ul{
+  
+  list-style-type: none;	
 }
 
-nav li
-{
-   display: inline-block;
-   cursor: pointer;
-   margin-right: 15px;
-   border-radius:10px;
-   margin:auto; 
-   border: 2px outset #990000;
-   border-collapse: collapse;
-   padding:4px;
+nav li{
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 15px;
+  border-radius:10px;
+  margin:auto; 
+  border: 2px outset #990000; 
+  border-collapse: collapse; 
+  padding:4px;
 }
 
-nav a
-{
-   font-size: 1em;
-   color: #FFFFFF;
-   padding-bottom: 3px;
-   text-decoration: none;
+nav a{
+  font-size: 1em;
+  color: #FFFFFF;
+  padding-bottom: 3px;
+  text-decoration: none;
 }
-
 /**********
   PAGE
 ***********/
@@ -115,14 +99,6 @@ body{
   width: auto;
 }
 
-<<<<<<< HEAD
-#OpenLayers_Map_2_OpenLayers_ViewPort{
-  display: none;
-}
-
-
-=======
->>>>>>> 900547550b90c7373ed44f87328a6ea09a058a34
 /************La listes des onglets****/
 #tabs{
   margin-left:25%;
@@ -353,7 +329,7 @@ body{
   bottom: 0;
   left: 0;
   margin-bottom: 0;
-  position:fixed;
+  position:relative;
   right: 0;
   z-index:1030;
   clear: both;
@@ -370,7 +346,6 @@ body{
   text-align:center;
   text-shadow:4px 4px 4px black;
 }
-
 
 /*******************
   Responsive Design

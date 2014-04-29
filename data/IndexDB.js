@@ -151,8 +151,9 @@ var DB = {
         }
 
 		transaction.oncomplete = function(event) {
-			$("#profil_name_modif_new").val("");
+
 			$("#profil_name_modif_anc").val(name);
+		    $("#profil_name_modif_new").val("");
 				
 		};
 

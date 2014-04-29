@@ -12,26 +12,26 @@ $(document).ready(function(){
      Les évenements click des menus
    *******************************************/
    $('a.listes[href^=#]').click(function() {
-   geolocalisationEnabled();
-   modifProfilEnabled();
-   addProfilEnabled();
-   titreHomeEnabled();
-   RechercheEnabled();
-   tabsOngletVisible();
-   affichageListeHotels();
-   DB.selectAllCommentaire();
-   DB.selectAllFavoris();
+	 geolocalisationEnabled();
+	 modifProfilEnabled();
+	 addProfilEnabled();
+	 titreHomeEnabled();
+	 RechercheEnabled();
+	 tabsOngletVisible();
+	 affichageListeHotels();
+	 DB.selectAllCommentaire();
+	 DB.selectAllFavoris();
      });
    
    $('a.modifprofil[href^=#]').click(function() {
-   geolocalisationEnabled();
-   tabsOngletEnabled();
-   addProfilEnabled();
-   titreHomeEnabled();
-   RechercheEnabled();
-   modifProfilVisible();
+	 geolocalisationEnabled();
+	 tabsOngletEnabled();
+	 addProfilEnabled();
+	 titreHomeEnabled();
+	 RechercheEnabled();
+	 modifProfilVisible();
    });
-   
+	 
   $('a.recherche[href^=#]').click(function() {
     geolocalisationEnabled();
     tabsOngletEnabled();
@@ -43,17 +43,17 @@ $(document).ready(function(){
    });
 
    $('a.quitter[href^=#]').click(function() {
-   titreHomeEnabled();
-   window.localStorage.removeItem('idload');
+	 titreHomeEnabled();
+	 window.localStorage.removeItem('idload');
      window.close();
   }); 
   
   $('#nomhotel').click(function(){
-    nom_recherche=true;
+	  nom_recherche=true;
   });
   
   $('#villehotel').click(function(){
-    villehotel=true;
+	  villehotel=true;
   });
   
   
@@ -61,7 +61,7 @@ $(document).ready(function(){
     var saisi=$('#recherche_saisi').val();
     chargementTableauHotelRecherche(saisi,villehotel,nom_recherche);
     geolocalisationVisible();
-  RechercheEnabled();
+	RechercheEnabled();
   }); 
   
   $('#button_insert_profil').click(function() {
@@ -85,8 +85,9 @@ $(document).ready(function(){
      alert('Votre champs est vide');
   else{
    if(DB.getDatabase()){
-      $("#map").css("display","block");
-     initialeLoad();
+       DB.changeProfilName();
+       $("#map").css("display","block");
+       initialeLoad();
        }
   }
  

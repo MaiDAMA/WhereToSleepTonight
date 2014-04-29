@@ -14,9 +14,6 @@
   "url": "https://github.com/MaiDAMA/WhereToSleepTonight"
   },
 
-
-  "installs_allowed_from": ["*"],
-
   "permissions": {
     "geolocation":{}
    },

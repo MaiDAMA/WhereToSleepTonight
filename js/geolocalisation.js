@@ -161,20 +161,20 @@ var chargementTableauHotelRecherche=function(nomRecherche,ville_recherche,nomhot
       for(var i=0;i<nb;i++){
         var nom_Commune=datahotel[i].fields.commune;
         var presenceMotCleCommune=nom_Commune.search(nomRecherche.toUpperCase());
-    var nom_Hotel=datahotel[i].fields.nom_commercial;
+		var nom_Hotel=datahotel[i].fields.nom_commercial;
         var presenceMotCleNom_Hotel=nom_Hotel.search(nomRecherche.toUpperCase());
         
-    if(ville_recherche==true){
-      if(presenceMotCleCommune!=-1){
+		if(ville_recherche==true){
+		  if(presenceMotCleCommune!=-1){
           tableau_hotel_Recherche.push(datahotel[i]);
           }
-    }
-    
-    if(nomhotel_recherche==true){
-      if(presenceMotCleNom_Hotel!=-1){
+		}
+		
+		if(nomhotel_recherche==true){
+		  if(presenceMotCleNom_Hotel!=-1){
           tableau_hotel_Recherche.push(datahotel[i]);
           }
-    } 
+		} 
       }
       
       if(tableau_hotel_Recherche.length!=0){
@@ -233,13 +233,13 @@ var geolocalisationHotelRecherche=function(ville_recherche,nomhotel_recherche){
             new OpenLayers.Projection("EPSG:4326"),
             new OpenLayers.Projection("EPSG:900913")
           );
-     var icon;
-    if(ville_recherche==true){
-      icon = new OpenLayers.Icon('libs/OpenLayers/img/marker-green.png');
-    }
-    if(nomhotel_recherche==true){
-      icon = new OpenLayers.Icon('libs/OpenLayers/img/marker-gold.png');
-    }
+	   var icon;
+	  if(ville_recherche==true){
+	    icon = new OpenLayers.Icon('libs/OpenLayers/img/marker-green.png');
+	  }
+	  if(nomhotel_recherche==true){
+	    icon = new OpenLayers.Icon('libs/OpenLayers/img/marker-gold.png');
+	  }
 
       var mon_marker=new OpenLayers.Marker(lonlat,icon);
       couche_markers.addMarker(mon_marker);
@@ -279,7 +279,7 @@ function gestionPopUp(popup,hotel_proximite){
             new OpenLayers.Projection("EPSG:4326"),
             new OpenLayers.Projection("EPSG:900913")
           );
-      
+		  
     //verification des calculs sur la connaissance des positionActuel de l'utilisateur pour calculer la distance
     if(positionActuel!=null){
     var positionActuelConverti=new OpenLayers.LonLat(positionActuel.longitude,positionActuel.latitude).transform(
@@ -292,7 +292,7 @@ function gestionPopUp(popup,hotel_proximite){
     else{
        distanceDeuxPoints="Géolocalisation refus&eacute;e";
     }
-  
+	
    var information_popup="<div id="+"popup_information"+">"+
    "<fieldset>"+
    "<legend style="+"font-style:italic;font-size:11px;"+">"+"Informations"+"</legend>"+

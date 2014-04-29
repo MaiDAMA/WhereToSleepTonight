@@ -4,23 +4,90 @@
 		<title>WhereToSleepTonight</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-		
-		<!-- Additional style information -->
-		<link rel="stylesheet" type="text/css" href="css/install.css" />
-	</head>
-	<body>
-		<div id="logoInstall">
-			<img id="logoWTST" src="img/logoWTST.jpg" alt="This is the logo of the application Where To Sleep Tonight">
-		</div>
 
-		<h3>Where To Sleep Tonight?</h3>
-		
-		<button id="install" onclick="navigator.mozApps.install('http://github.com/MaiDAMA/WhereToSleepTonight/manifest.webapp'); return false;">
-				Installer
-		</button>
-		<p id="status"></p>	
-		
-	<!-- Load the runner -->	
-	<script type="text/javascript" src="js/installerApplication.js"></script>
-	</body>
+     <!-- Additional style information -->
+      <link rel="stylesheet" type="text/css" href="css/install.css" />
+  </head>
+
+  <body>
+
+      <div id="logoInstall">
+
+          <img id="logoWTST" src="img/logoWTST.jpg" alt="This is the logo of the application Where To Sleep Tonight">
+        </div>
+       <h3>Where To Sleep Tonight?</h3>
+    <button id="install">
+      Installer
+    </button>
+     <p>
+    "Where To Sleep Tonight" est une application de recherche qui permet aux utilisateurs de trouver les hôtels autour de leur position. Il permet d'afficher des informations sur les hôtels tels que le numéro de téléphone, adresse. L'utilisateur peut également ajouter un hôtel dans la liste de ses hotles favoris. L'application peut également indiquer la distance entre la position de l'utilisateur et un hôtel qui apparaît sur ​​la carte.
+     </p>
+    <div id="imageContenaire">
+      <ul id="imageList">
+        <li>
+          <img src="img/imgInstallApp/installS1.JPG" alt="This is the screenshot of the application Where To Sleep Tonight"/>
+        </li>
+        <li>
+          <img src="img/imgInstallApp/installS2.JPG" alt="This is the screenshot of the application Where To Sleep Tonight"/>
+        </li>
+        <li>
+          <img src="img/imgInstallApp/install2.JPG" alt="This is the screenshot of the application Where To Sleep Tonight"/>
+        </li>
+        <li>
+          <img src="img/imgInstallApp/install1.JPG" alt="This is the screenshot of the application Where To Sleep Tonight"/>
+       </li>
+    
+      </ul>
+    </div>
+  </body>
+ <script>
+
+  (function(){
+    function install(ev) {
+      ev.preventDefault();
+      // define the manifest URL
+      var manifest_url = "http://maidama.github.com/WhereToSleepTonight/manifest.webapp";
+      // install the app
+      var myapp = navigator.mozApps.install(manifest_url);
+      myapp.onsuccess = function(data) {
+        // App is installed, remove button
+       this.parentNode.removeChild(this);
+      };
+      myapp.onerror = function() {
+        // App wasn't installed, info is in this.error.name
+        console.log('Install failed, error: ' + this.error.name);
+       };
+    };
+    // get a reference to the button and call install() on click
+    var button = document.getElementById('install');
+    button.addEventListener('click', install, false);
+  })();
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>

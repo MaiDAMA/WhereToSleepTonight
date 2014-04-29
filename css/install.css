@@ -15,3 +15,139 @@ h3{
 	text-decoration:overline;
 	font-family:Arial,Helvetica,sans-serif;
 }
+
+
+ h3{
+
+ 	text-decoration:overline;
+ 	font-family:Arial,Helvetica,sans-serif;
+
+}
+
+
+
+li img{
+    width: 640px;
+    height: 410px;
+
+}
+
+
+
+@-webkit-keyframes AutoSlide {
+
+    0%, 20%, 100% { left: 0 }
+
+    25%, 45% { left: -640px } 
+
+    50%, 75% { left: -1280px } 
+
+    85%, 97% { left: -1920px } 
+
+}
+
+
+
+@-moz-keyframes AutoSlide {
+
+    0%, 20%, 100% { left: 0 }
+
+    25%, 45% { left: -640px } 
+
+    50%, 75% { left: -1280px } 
+
+    85%, 97% { left: -1920px } 
+
+}
+
+
+
+@keyframes AutoSlide {
+
+    0%, 20%, 100% { left: 0 }
+
+    25%, 45% { left: -640px } 
+
+    50%, 75% { left: -1280px } 
+
+    85%, 97% { left: -1920px } 
+
+}
+
+
+
+
+
+#imageContenaire {
+
+    position: relative; 
+
+    width: 640px; 
+
+    height: 410px; 
+
+    margin: 20px auto;
+
+    overflow: hidden; 
+
+}
+
+
+
+#imageList li {
+
+   display: inline; 
+
+}
+
+
+
+#imageList {
+
+    position: absolute; 
+
+    top: 0; 
+    left: 0; 
+
+    width: 2600px; 
+
+    margin: 0;
+
+    padding: 0;
+
+
+
+    /*CSS3 webkit keyframes animation*/
+
+    -webkit-animation-name: AutoSlide;
+
+    -webkit-animation-duration: 10s;
+
+    -webkit-animation-iteration-count: infinite;
+
+    -webkit-animation-timing-function: ease-in-out;
+
+
+
+    /*CSS3 moz keyframes animation*/
+
+    -moz-animation-name: AutoSlide;
+
+    -moz-animation-duration: 10s;
+
+    -moz-animation-iteration-count: infinite;
+
+    -moz-animation-timing-function: ease-in-out;
+
+
+
+    /*CSS3 W3C keyframes animation*/
+
+    animation-name: AutoSlide;
+
+   animation-duration: 10s;
+
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
+
+ }

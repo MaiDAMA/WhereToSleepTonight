@@ -4,13 +4,16 @@
   "description": "This application search the different Hotels near of your position ",
   "launch_path": "/WhereToSleepTonight/index.html",
   "icons": {
+
       "128": "/WhereToSleepTonight/img/logoWTST-128.png"
+
   },
 
   "developer": {
   "name": "MaiDAMA_Hellodie_WeLiSa",
   "url": "https://github.com/MaiDAMA/WhereToSleepTonight"
   },
+
 
   "installs_allowed_from": ["*"],
 

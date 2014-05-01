@@ -87,7 +87,9 @@ $(document).ready(function(){
    if(DB.getDatabase()){
        DB.changeProfilName();
        $("#map").css("display","block");
-       initialeLoad();
+        location.reload(true);
+        var url = $(this).prop('href');
+        $("#profil_modif").load(url);
        }
   }
  
